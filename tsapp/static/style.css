@@ -1,0 +1,77 @@
+body, html{
+    min-height: 100vh;
+    background-color: lightgray;
+    width: 100%;
+
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: 100px;
+    background-color: grey;
+    box-shadow: 0.3em 0.3em 2em rgba(0, 0, 0, 0.6);
+}
+
+.display-timer{
+    font: small-caps bold 24px/1 sans-serif;
+}
+
+#timer-container{
+    width: 500px;
+}
+
+.card{
+    width: 600px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px;
+    max-height: 90%;
+}
+
+#textDisplay{
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin-left: calc(-1rem - 2px);
+    margin-left: calc(1rem + 2px);
+}
+
+#textInput{
+    box-shadow: none;
+    border: 2px solid lightgray;
+    outline: none;
+    width: 100%;
+    margin: auto;
+    resize: none;
+    padding: .5rem 1rem;
+}
+
+#textInput:focus{
+    border-color: black;
+}
+
+#score-card{
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    width: 250px;
+    max-width: 90%;
+}
+
+.position{
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+}
+
+.start-buttons{
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    top: 30%; 
+    right: 50%;
+    transform: translate(50%,-50%);
+    width: 120px;
+}
