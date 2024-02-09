@@ -4,8 +4,8 @@ const textInputElement = document.getElementById("textInput");
 const countdownElement = document.getElementById("countdown");
 const scoreElement = document.getElementById("score");
 
-var index = 0;
-var mistakes = 0;
+let index = 0;
+let mistakes = 0;
 let fullWord = true;
 let mistake = false;
 
@@ -13,7 +13,7 @@ textInputElement.addEventListener("input", () => {
     const arrayText = texDisplayElement.querySelectorAll("span");
     const inputTextValue = textInputElement.value.split("")[index];
     if (inputTextValue == null) {
-        index--;
+        --index;
         if (arrayText[index].classList.contains("text-danger")) {
             mistake = true;
             if (mistakes != 0) {
@@ -73,7 +73,7 @@ textInputElement.addEventListener("input", () => {
     }
 });
 
-var countScore = 0;
+let countScore = 0;
 function increaseScore() {
     ++countScore;
     scoreElement.innerText = countScore;
@@ -85,8 +85,8 @@ function getRandomText() {
         .then((data) => data.content);
 }
 
-var seconds = 60;
-var countdown;
+let seconds = 60;
+let countdown;
 function startCountdown() {
     if (seconds < 60) {
         countdownElement.innerText = seconds;
